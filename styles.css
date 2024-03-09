@@ -1,0 +1,97 @@
+:root {
+  --background-color: #333;
+  --button-background: transparent;
+  --button-color: #fff;
+  --button-hover-background: rgba(255, 255, 255, 0.8); /* White with 80% opacity on hover */
+  --button-hover-color: #333;
+  --button-border: 2px solid #fff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--background-color); /* Dark background */
+}
+/* Your existing styles */
+
+.top-left-bar {
+  position: fixed;
+  top: 40px; /* Adjust height to your preference */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Adjust thickness to your preference */
+  background-color: black; /* Adjust color as needed */
+  z-index: 999; /* Ensure it's below buttons */
+}
+
+.top-left-button-container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align buttons to center */
+}
+
+.button-container button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: var(--button-border); /* White border */
+  border-radius: 5px;
+  background-color: var(--button-background);
+  color: var(--button-color); /* White text */
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: auto; /* Adjust width based on text */
+}
+
+.button-container button:hover {
+  background-color: var(--button-hover-background); /* White background with opacity on hover */
+  color: var(--button-hover-color); /* Dark text on hover */
+}
+
+/* Your existing styles */
+/* Your existing styles */
+
+.top-left-bar {
+  position: fixed;
+  top: 40px; /* Adjust height to your preference */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Adjust thickness to your preference */
+  background-color: black; /* Adjust color as needed */
+  z-index: 999; /* Ensure it's below buttons */
+}
+
+.top-left-button-container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Style for the top-left buttons */
+.top-left-button-container button {
+  margin: 0 5px; /* Add margin between buttons */
+  background-color: transparent; /* Transparent background */
+  border: none; /* Remove button border */
+  color: white; /* Text color */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+/* Change button background on hover */
+.top-left-button-container button:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+}
