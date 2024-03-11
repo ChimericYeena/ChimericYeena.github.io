@@ -1,20 +1,22 @@
-// Define a function to add a new button
-function addButton(containerId, text, url) {
-    const container = document.getElementById(containerId);
-    const button = document.createElement('button');
-    button.textContent = text;
-    button.addEventListener('click', function() {
-        window.location.href = url;
-    });
-    container.appendChild(button);
-}
+document.addEventListener("DOMContentLoaded", function() {
+  const hiddenElement = document.getElementById("hiddenElement");
+  const button = document.getElementById("showButton");
 
-// Add initial buttons
-addButton('buttonContainer', 'Stream', 'stream.html');
-addButton('buttonContainer', 'Button 2', 'subdirectory2');
-addButton('buttonContainer', 'Button 3', 'subdirectory3');
-addButton('buttonContainer', 'Button 4', 'subdirectory4');
+  if (hiddenElement === null || button === null) {
+    console.error("Could not find required elements");
+    return;
+  }
 
-// Add initial buttons for stream.html
-addButton('topLeftButtonContainer', 'Home', 'index.html');
-addButton('topLeftButtonContainer', 'Stream', 'stream.html');
+  let isHidden = true; // Keep track of the current visibility state
+
+  button.addEventListener("click", function() {
+    // Toggle visibility based on current state
+    isHidden = !isHidden;
+
+    if (isHidden) {
+      hiddenElement.classList.add("hidden");
+    } else {
+      hiddenElement.classList.remove("hidden");
+    }
+  });
+});
