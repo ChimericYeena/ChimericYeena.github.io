@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Buttons</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<html>
+  <body>
+    <!-- Add a placeholder for the Twitch embed -->
+    <div id="twitch-embed"></div>
 
-<div class="top-left-bar"></div> <!-- Bar under top-left buttons -->
-<div class="top-left-button-container" id="topLeftButtonContainer">
-    <!-- Buttons will be added dynamically here -->
-</div>
+    <!-- Load the Twitch embed JavaScript file -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-<div class="button-container" id="buttonContainer">
-    <!-- Buttons will be added dynamically here -->
-</div>
-
-<script src="script.js"></script>
-</body>
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "chimericyeena",
+        // Only needed if this page is going to be embedded on other websites
+        parent: ["chimeric.cc"]
+      });
+    </script>
+  </body>
 </html>
