@@ -9,7 +9,22 @@
 <body>
  <div class="background-container">
    <div class="container-row">
-      <div class="container-row ">
+    <div class="hidden" id="hiddenElement">
+      <div class="container-row">
+        <div id="twitch-embed"></div>
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "chimericyeena",
+            parent: ["chimeric.cc"]
+          });
+        </script>
+      </div>
+    </div>
+    <div class="container-row">
+      <div class="hidden">
         <div id="twitch-embed"></div>
         <script src="https://embed.twitch.tv/embed/v1.js"></script>
         <script type="text/javascript">
@@ -22,8 +37,10 @@
         </script>
       </div>
       <div class="container-column">
-        <div class="container-row">
-          <div class="hidden" id="hiddenElement"><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'V7V2D6CG3');kofiwidget2.draw();</script> </div>
+        <div class="container-row relative">
+          <diva class="absolute">
+            <div class="hidden" id="hiddenElement"><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'V7V2D6CG3');kofiwidget2.draw();</script> </div>
+          </div>
           <button id="showButton">Click Me!</button>
         </div>
         <button>fish</button>

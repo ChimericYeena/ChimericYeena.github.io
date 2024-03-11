@@ -12,7 +12,7 @@
 
 body {
   background-color: var(--main-color);
-  background-image: url('./background.png');
+  background-image: url('https://static1.e621.net/data/60/0b/600bcde1e3ce43fc622eac377eab92e1.png');
   background-repeat: no-repeat;
   background-size: cover; 
   background-position: center; 
@@ -59,6 +59,13 @@ button:hover {
 }
 .absolute {
   position: absolute;
+  min-height: 90px;
+  display: block;
+  align-self: left;
+}
+.relative {
+  position: relative;
+  display: inline-block;
 }
 .container-row {
   display: flex;
