@@ -1,20 +1,37 @@
-<html>
-  <body>
-    <!-- Add a placeholder for the Twitch embed -->
-    <div id="twitch-embed"></div>
-
-    <!-- Load the Twitch embed JavaScript file -->
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
-    <script type="text/javascript">
-      new Twitch.Embed("twitch-embed", {
-        width: 854,
-        height: 480,
-        channel: "chimericyeena",
-        // Only needed if this page is going to be embedded on other websites
-        parent: ["chimeric.cc"]
-      });
-    </script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yeener</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <div class="background-container">
+   <div class="container-row">
+      <div class="container-row ">
+        <div id="twitch-embed"></div>
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "chimericyeena",
+            parent: ["chimeric.cc"]
+          });
+        </script>
+      </div>
+      <div class="container-column">
+        <div class="container-row">
+          <div class="hidden" id="hiddenElement"><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'V7V2D6CG3');kofiwidget2.draw();</script> </div>
+          <button id="showButton">Click Me!</button>
+        </div>
+        <button>fish</button>
+        <button onclick="window.location.href='https://twitch.tv/chimericyeena'">My Twitch</button>
+      </div>
+    </div>
+ </div>
+  <script src="script.js"></script>
+</body>
 </html>
+
